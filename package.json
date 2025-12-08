@@ -1,9 +1,9 @@
 {
-  "name": "ltu_assignment1",
+  "name": "ltu_assignment2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "postinstall": "prisma generate",
+    "postinstall": "",
     "dev": "next dev ",
     "build": "next build ",
     "start": "next start",

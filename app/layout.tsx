@@ -10,8 +10,8 @@ const suse = SUSE({
 });
 
 export const metadata: Metadata = {
-  title: "LTU Assignment 1",
-  description: "Generated for Assignment 1",
+  title: "LTU Assignment 2",
+  description: "Generated for Assignment 2",
 };
 
 export default function RootLayout({

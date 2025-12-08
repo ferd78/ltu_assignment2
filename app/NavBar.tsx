@@ -76,7 +76,7 @@ export default function NavBar() {
         <h2 className="text-white font-semibold tracking-[1.25] text-md">
           <div className="flex items-center justify-center gap-2">
             <Image src="/la-trobe.png" width={20} height={20} alt="La Trobe Logo" />
-            <p>LTU Assignment 1</p>
+            <p>LTU Assignment </p>
           </div>
         </h2>
         <h2 className="text-white font-semibold tracking-[1.25] text-md">
