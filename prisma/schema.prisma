@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  
+}
+
+model GameSession {
+  id        Int      @id @default(autoincrement())
+  playerId  String
+  startedAt DateTime @default(now())
+  endedAt   DateTime?
+  duration  Int? // seconds
+}

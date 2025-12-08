@@ -16,7 +16,6 @@ export default function Footer() {
     }));
   }, []);
 
-  // Don't render until mounted to avoid hydration errors
   if (!mounted) {
     return (
       <div className="fixed bottom-0 left-0 w-full flex justify-center">

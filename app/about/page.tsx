@@ -54,7 +54,7 @@ export default function AboutPage(){
             {/* YouTube Video Embed */}
             <div className="max-w-2xl mx-auto">
                 <div className="flex items-center justify-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5pkYvOz05eg?si=otvfqDKF5b8oVzDo" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5pkYvOz05eg?si=otvfqDKF5b8oVzDo" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                 </div>
             </div>
         </div>
