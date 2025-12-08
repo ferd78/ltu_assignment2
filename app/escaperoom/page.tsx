@@ -10,12 +10,12 @@ export default function EscapeRoomPage() {
   const [stage, setStage] = useState(1);
   const [gameStarted, setGameStarted] = useState(false);
 
-  // TIMER STATES
+  
   const [seconds, setSeconds] = useState(0);
   const [running, setRunning] = useState(false);
   const [saveStatus, setSaveStatus] = useState("");
 
-  // TIMER EFFECT (only runs when "running = true")
+  
   useEffect(() => {
     if (!running) return;
 
@@ -26,14 +26,14 @@ export default function EscapeRoomPage() {
     return () => clearInterval(interval);
   }, [running]);
 
-  // AUTO-SAVE WHEN STAGE BECOMES 4 (GAME COMPLETED)
+  
   useEffect(() => {
     if (stage === 4) {
-      setRunning(false);           // ⛔ STOP THE TIMER
+      setRunning(false);           
     }
   }, [stage]);
 
-  // SAVE FUNCTION
+  
   async function saveResult(duration: number) {
     setSaveStatus("Saving...");
 
@@ -51,11 +51,11 @@ export default function EscapeRoomPage() {
     }
   }
 
-  // START GAME
+ 
   function startGame() {
     setGameStarted(true);
     setSeconds(0);
-    setRunning(true); // ▶ START TIMER
+    setRunning(true); 
   }
 
   function restartGame() {
@@ -74,14 +74,14 @@ export default function EscapeRoomPage() {
       <div className="w-screen h-[70vh] flex pt-5 justify-center">
         <div className="bg-black w-19/20 h-19/20 rounded-xl bg-[url('/bg.jpg')] bg-cover bg-center p-6 overflow-y-auto">
 
-          {/* TIMER */}
+         
           {gameStarted && (
             <div className="w-full flex justify-end mt-3">
               <Timer seconds={seconds} />
             </div>
           )}
 
-          {/* START SCREEN */}
+          
           {!gameStarted && (
             <div className="w-full h-full flex flex-col justify-center items-center text-white">
               <h2 className="text-3xl font-bold mb-6">Escape Room Challenge</h2>
@@ -104,12 +104,12 @@ export default function EscapeRoomPage() {
             </div>
           )}
 
-          {/* STAGES */}
+         
           {gameStarted && stage === 1 && <StageOne onNext={() => setStage(2)} />}
           {gameStarted && stage === 2 && <StageTwo onNext={() => setStage(3)} />}
           {gameStarted && stage === 3 && <StageThree onNext={() => setStage(4)} />}
 
-          {/* GAME END */}
+        
           {gameStarted && stage === 4 && (
             <div className="flex flex-col justify-center items-center mt-20 text-center text-white">
               
@@ -117,8 +117,6 @@ export default function EscapeRoomPage() {
                  Congratulations, You have escaped the room successfully! 
               </h2>
 
-
-              {/* MANUAL SAVE BUTTON */}
               <div className="mt-6">
                 <SaveButton duration={seconds} />
               </div>
