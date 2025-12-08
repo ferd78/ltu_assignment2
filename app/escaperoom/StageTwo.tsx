@@ -28,7 +28,7 @@ export default function StageTwo({ onNext }: StageProps) {
   return (
     <div className="text-white">
       <h2 className="text-xl font-bold mb-3">Stage 2</h2>
-      <p className="mb-3">Write a function that returns <b>2</b>.</p>
+      <p className="mb-3">Write a function named "solve" that returns <b>2</b>.</p>
 
 
     <div className="bg-slate-800 rounded-xl">

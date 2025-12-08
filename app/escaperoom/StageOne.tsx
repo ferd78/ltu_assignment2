@@ -29,7 +29,7 @@ export default function StageOne({ onNext } : StageProps) {
     <div className="text-white">
       <h2 className="text-xl font-bold mb-3">Stage 1</h2>
       <p className="mb-3">
-        Write a function that returns <b>"ESCAPED"</b>.
+        Write a function named "escape" that returns <b>"ESCAPED"</b>.
       </p>
     
 
