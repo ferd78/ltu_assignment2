@@ -2,11 +2,13 @@ import { prisma } from "@/lib/prisma";
 
 export async function POST(req: Request) {
   try {
-    const { duration } = await req.json();
+    const { duration, sessionName } = await req.json();
 
-    
+    if (!sessionName) {
+      return new Response("Session name is required.", { status: 400 });
+    }
+
     const endedAt = new Date();
-    
     const startedAt = new Date(endedAt.getTime() - duration * 1000);
 
     const saved = await prisma.gameSession.create({
@@ -15,12 +17,13 @@ export async function POST(req: Request) {
         startedAt,
         endedAt,
         duration,
+        sessionName,  
       },
     });
 
     return Response.json({
       success: true,
-      session: saved,
+      session: saved,  
     });
 
   } catch (err) {

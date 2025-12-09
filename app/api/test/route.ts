@@ -8,3 +8,6 @@ export async function GET() {
   const sessions = await prisma.gameSession.findMany();
   return Response.json(sessions);
 }
+
+
+

@@ -8,7 +8,7 @@ export async function POST(req: Request) {
       return new Response("sessionId missing", { status: 400 });
     }
 
-    // We need the original session to calc duration
+    
     const session = await prisma.gameSession.findUnique({
       where: { id: sessionId }
     });
