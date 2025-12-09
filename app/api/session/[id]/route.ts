@@ -31,7 +31,9 @@ export async function PATCH(
 
   const updated = await prisma.gameSession.update({
     where: { id },
-    data: { sessionName },
+    data: { 
+      sessionName: sessionName as string | null 
+    },
   });
 
   return NextResponse.json(updated);
